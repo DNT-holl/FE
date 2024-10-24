@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web bán vé xem phim </title>
     <link rel="stylesheet" href="style.css">
- 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> 
 </head>
 
 <body>
@@ -36,13 +36,10 @@
                     <button type="submit">Tìm kiếm</button>
                 </form>
             </div>
-            <div id="actions">
-                <div class="item">
+            <div class="btn">
+                <button id="btn_aut" style="border: 0px;background-color: white;">
                     <img src="assets/user.png" alt="">
-                </div>
-                <div class="item">
-                    <img src="assets/cart.png" alt="">
-                </div>
+                </button>
             </div>
         </div>
         <div id="banner">
@@ -156,7 +153,104 @@
             </div>
         </div>
     </div>
+    <div id="modal" style="display: none;">
+        <div class="modal_body">
+
+                <!--Dang Nhap-->
+                <div class="autform ">
+                    <div id="autform_login" style="display: block;">
+                        <div class="autform_container">
+                            <div class="autform_header">
+                                <h3 class="autform-heading">Đăng nhập</h3>
+                                <span class="autform__switch-btn">
+                                    <button id="login">Đăng ký</button>
+                                </span>
+                            </div>
+                            <div class="autform-form">
+                                <div class="autform-group">
+                                    <input type="text" class="autform_input" placeholder="Nhập email hoặc số điện thoại của bạn">
+                                </div>
+                                <div class="autform-group">
+                                    <input type="password" class="autform_input" placeholder="Nhập mật khẩu">
+                                </div>
+                            </div>
+                            <div class="autform_aside">
+                                <div class="authform_help">
+                                    <a href="" class="autform_help-link">Quên mật khẩu</a>
+                                    <span class="authform_help-separate"></span>
+                                    <a href="" class="autform_help-link">Cần trợ giúp?</a>
+                                </div>
+                            </div>
+                            <div class="autform_controls">
+                                <button id="bt_login_back">TRỞ LẠI</button>
+                                <button class="bt bt--primary">ĐĂNG NHẬP</button>
+                            </div>
+                        </div>
+                        <span class="authform_socials_login-separate"></span>
+                        <div class="autform-socials">
+                            <a href="https://web.facebook.com/?_rdc=1&_rdr" class="bt bt--with-icon">
+                                <i class="fab fa-facebook-square"></i>
+                                Kết nối với Facebook
+                            </a>
+                            <a href="https://accounts.google.com/v3/signin/identifier?ifkv=AcMMx-dNN_xWGO-icnb1lDTwzwev4s_IN0PYiJ7bWP9Kc9F9tXUqAjszt7WjFNBLItrAIqKbD3Dspw&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S1392750692%3A1729740190549530&ddm=0" class="bt bt--with-icon">
+                                <i class="fa-brands fa-google"></i>
+                                Kết nối với Google
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Dang ky-->
+
+                 <div class="autform " >
+                    <div id="autform_register" style="display: none;">
+                        <div class="autform_container">
+                            <div class="autform_header">
+                                <h3 class="autform-heading">Đăng ký</h3>
+                                <span class="autform__switch-btn">
+                                    <button id="register">Đăng nhập</button>
+                                </span>
+                            </div>
+                            <div class="autform-form">
+                                <div class="autform-group">
+                                    <input type="text" class="autform_input" placeholder="Nhập email hoặc số điện thoại của bạn">
+                                </div>
+                                <div class="autform-group">
+                                    <input type="password" class="autform_input" placeholder="Nhập mật khẩu">
+                                </div>
+                                <div class="autform-group">
+                                    <input type="password" class="autform_input" placeholder="Nhập lại mật khẩu">
+                                </div>
+                            </div>
+                            <div class="autform_aside">
+                                <p class="autform_policy">
+                                    Bằng việc đăng ký bạn đã đồng ý về
+                                    <a href="" class="autform_policylink">Điều khoản dịch vụ</a> &
+                                    <a href="" class="autform_policylink">Chính sách bảo mật</a> 
+                                </p>
+                            </div>
+                            <div class="autform_controls">
+                                <button id="bt_register_back">TRỞ LẠI</button>
+                                <button class="bt bt--primary">ĐĂNG KÝ</button>
+                            </div>
+                        </div>
+                        <span class="authform_socials_register-separate"></span>
+                        <div class="autform-socials">
+                            <a href="https://web.facebook.com/?_rdc=1&_rdr" class="bt bt--with-icon">
+                                <i class="fab fa-facebook-square"></i>
+                                Kết nối với Facebook
+                            </a>
+                            <a href="https://accounts.google.com/v3/signin/identifier?ifkv=AcMMx-dNN_xWGO-icnb1lDTwzwev4s_IN0PYiJ7bWP9Kc9F9tXUqAjszt7WjFNBLItrAIqKbD3Dspw&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S1392750692%3A1729740190549530&ddm=0" class="bt bt--with-icon">
+                                <i class="fa-brands fa-google"></i>
+                                Kết nối với Google
+                            </a>
+                        </div>
+                    </div>
+                </div> 
+        </div>
+        <div class="modal_overlay"></div>
     <script src="script.js"></script>
+    </div>
 </body>
 
 </html>

@@ -1,30 +1,30 @@
-const next = document.querySelector('.next')
-const prev = document.querySelector('.prev')
-const comment = document.querySelector('#list-comment')
-const commentItem = document.querySelectorAll('#list-comment .item')
-var translateY = 0
-var count = commentItem.length
+const btn_aut = document.getElementById('btn_aut');
+const modal = document.getElementById('modal');
+const login = document.getElementById('login');
+const register = document.getElementById('register');
+const autform_login = document.getElementById('autform_login');
+const autform_register = document.getElementById('autform_register');
+const bt_login_back = document.getElementById('bt_login_back');
+const bt_register_back = document.getElementById('bt_register_back');
 
-next.addEventListener('click', function (event) {
-  event.preventDefault()
-  if (count == 1) {
-    // Xem hết bình luận
-    return false
-  }
-  translateY += -400
-  comment.style.transform = `translateY(${translateY}px)`
-  count--
+btn_aut.addEventListener('click', () => {
+  modal.style.display = 'block';
+});
+
+login.addEventListener('click', () => {
+  autform_register.style.display = 'block';
+  autform_login.style.display='none';
+});
+
+register.addEventListener('click', () => {
+  autform_login.style.display = 'block';
+  autform_register.style.display = 'none';
 })
 
-prev.addEventListener('click', function (event) {
-  event.preventDefault()
-  if (count == 3) {
-    // Xem hết bình luận
-    return false
-  }
-  translateY += 400
-  comment.style.transform = `translateY(${translateY}px)`
-  count++
+bt_login_back.addEventListener('click', () => {
+  modal.style.display = 'none';
 })
 
-
+bt_register_back.addEventListener('click', () => {
+  modal.style.display = 'none';
+})

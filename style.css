@@ -9,11 +9,7 @@
     margin:0;
     box-sizing: border-box;
     font-family:'Poppins', sans-serif;
-    cursor: pointer;
-    
 }
-
-
 
 #wrapper {
     width: 100%;
@@ -120,23 +116,6 @@
     color:#D0D0D0;
 }
 
-#banner .box-left button {
-    width: 191px;
-    height: 40px;
-    margin-top:41px;
-    background:#1d1a1a;
-    border:none;
-    outline:none;
-    color:#fff;
-    font-weight: bold;
-    border-radius: 20px;
-    transition:0.4s;
-}
-
-#banner .box-left button:hover {
-    background:orange;
-}
-
 #banner .box-right {
     padding-left:200px;
     display: flex;
@@ -211,6 +190,7 @@
     display: block;
     margin:0px auto;
     border-radius: 20px;
+    cursor: pointer;
 }
 
 #list-products .item :hover {
@@ -218,13 +198,14 @@
     border-color: #fff;
 }
 
-
-#list-products .item button {
-
+.buy_button {
     width: 191px;
     height: 40px;
     margin-top:10px;
     margin-left: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background:#1d1a1a;
     border:none;
     outline:none;
@@ -232,12 +213,13 @@
     font-weight: bold;
     border-radius: 20px;
     transition:0.4s;
+    text-decoration: none;
 }
 
-#list-products .item button:hover {
+.buy_button:hover {
     background:orange;
 }
-
+ 
 #list-products .item .name {
     text-align: center;
     color:#fff;
@@ -256,9 +238,6 @@
     font-weight: bold;
     margin-top:20px;
 }
-
-
-
 
 .list-page {
     width: 50%;
@@ -293,7 +272,6 @@
     text-decoration: none;
 }
 
-
 #saleoff {
     width: 100%;
     display: flex;
@@ -327,7 +305,6 @@
     background-image:url("assets/sale.jpg");
 }
 
-
 #footer {
     width: 100%;
     background:rgb(0,0,0,0.79);
@@ -349,7 +326,6 @@
 
 }
 
-
 #footer .box .quick-menu .item{
     margin-bottom:12px;
 
@@ -358,8 +334,6 @@
     color:#fff;
     text-decoration: none;
 }
-
-
 
 #footer .box form input {
     width: 294px;
